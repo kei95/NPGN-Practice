@@ -1,0 +1,21 @@
+req.session.userId = user.id
+
+{userId: 1} -> send that to redis
+
+1
+sess: fd2rfwjsao9fd0saf -> {userId: 1}
+
+2
+Express-session will set a cookie on my browser ajsdfjaoifd9s8a90f8d0ak(random generated)
+
+3
+When a user makes a request
+ajsdfjaoifd9s8a90f8d0ak -> send to the server
+
+4
+Decrypt the cookie(by using secret. That's why secret needs to be hidden)
+ajsdfjaoifd9s8a90f8d0ak -> sess: fd2rfwjsao9fd0saf
+
+5
+Make a request to redis
+sess: fd2rfwjsao9fd0saf -> {userId: 1}
